@@ -1,6 +1,6 @@
 
 // helpful comemnttn is hthsi
-var x = 30;
+var x = 0;
 var y = 30;
 var w = 30;
 var h = 30;
@@ -17,7 +17,8 @@ function random(min, max) {
 //draw fucntion
 function draw() {
     //makes x a random number
-    x=random(29,29.4);
+    x=random(25,30);
+    y=random(25,30);
     //CHANGES THE FRAMERATE (AMAZING)
     frameRate(59);
     //makes background grey
@@ -30,17 +31,17 @@ function draw() {
     //makes the first rectangle
     rect(x, y, 2*w, 2*h);
     fill(0,255,0);
-    ellipse(5*x, 2*y, 4*w, 2*h);
+    ellipse(x+w*4, y+1*h, 4*w, 2*h);
     fill(0,0,255);
-    triangle(x, 3*y, 7*w, 3*y, 4*w, 4*y);
+    triangle(x, y+2*h, x+6*w, y+2*h, x+3*w, y+3*h);
     fill(255,0,255);
-    rect(x, y*4, 3*w, 3*h);
+    rect(x, y+3*h, 3*w, 3*h);
     fill(255,255,0);
-    rect(x*4, y*4, 3*w, 3*h);
+    rect(x+w*3, y+3*h, 3*w, 3*h);
     fill(0,255,255);
-    ellipse(x+(w*2), y*7+h, w*4, h*2);
+    ellipse(x+(w*2), y+7*h, w*4, h*2);
     fill(255,255,255);
-    rect(x+w*4, y*7, w*2, h*2);
+    rect(x+w*4, y+6*h, w*2, h*2);
     fill(0,0,0);
-    rect(x, y*9, w*2, h*2);
+    rect(x, y+8*h, w*2, h*2);
 }
